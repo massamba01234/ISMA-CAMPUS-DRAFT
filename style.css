@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #3e3e3e;
+    font-size: 1.13rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Cover Styles */
+.cover {
+    padding-top: 10.7rem;
+    padding-bottom: 4.8rem;
+    color: #3e3e3e;
+    text-align: center;
+}
+
+.cover-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+.heading {
+    font-size: 2.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0rem;
+    color: #1f1f1f;
+}
+
+.subheading {
+    font-size: 2.01rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1.19rem;
+    color: #1f1f1f;
+}
+
+/* Paragraph Styles */
+.paragraph {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Button Styles */
+.button {
+    border: none;
+    border-radius: 0px;
+    color: #1f1f1f;
+    background-color: #ece4dd;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+/* Section Styles */
+.section {
+    padding: 4.51rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columns Styles */
+.columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.column {
+    flex-basis: 77%;
+}
+
+/* Group Styles */
+.group {
+    margin-top: 1.2rem;
+}
+
+/* Utility Classes */
+.has-text-align-center {
+    text-align: center;
+}
+
+.has-background {
+    background-color: #ece4dd;
+}
+
+.has-text-color {
+    color: #3e3e3e;
+}
+
+.alignfull {
+    width: 100%;
+}

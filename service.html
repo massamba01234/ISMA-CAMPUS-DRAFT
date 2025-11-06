@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ISMA</title>
+    <link rel="shortcut icon" href="./ISMA_1.jpg">
+    <style>
+        /* Styles spécifiques pour cette page, à intégrer dans style.css si possible */
+        .service-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+        }
+        .service-card h3 {
+            color: #1f1f1f;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .service-card p {
+            color: #3e3e3e;
+            line-height: 1.6;
+        }
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        .service-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .service-list a {
+            color: #1f1f1f;
+            text-decoration: none;
+        }
+        .service-list a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+        .search-bar button {
+            padding: 0.75rem 1.5rem;
+            background: #1f1f1f;
+            color: #fff;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./a-propos.html">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="cover has-background">
+            <div class="cover-inner">
+                <h1 class="heading has-text-align-center">Nos Services</h1>
+                <p class="paragraph has-text-align-center">
+                    Découvrez les ressources exclusives de l’ISMA : accédez à notre base de données des membres, explorez les offres de stage et d’emploi, et bien plus encore.
+                </p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="service-card">
+                <h2 class="subheading">Base de Données des Membres</h2>
+                <p>
+                    Consultez notre annuaire des anciens étudiants pour retrouver vos camarades, élargir votre réseau professionnel et échanger avec des experts du domaine.
+                </p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un membre par nom, promotion ou domaine...">
+                    <button>Rechercher</button>
+                </div>
+                <ul class="service-list">
+                    <li><a href="#">Membres par promotion</a></li>
+                    <li><a href="#">Membres par domaine d’expertise</a></li>
+                    <li><a href="#">Membres actifs dans le réseautage</a></li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h2 class="subheading">Offres de Stage</h2>
+                <p>
+                    Découvrez les dernières offres de stage dans le domaine du génie de la santé, proposées par nos partenaires et membres.
+                </p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher une offre de stage...">
+                    <button>Rechercher</button>
+                </div>
+                <ul class="service-list">
+                    <li><a href="#">Stages en France</a></li>
+                    <li><a href="#">Stages à l’international</a></li>
+                    <li><a href="#">Stages récents</a></li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h2 class="subheading">Offres d’Emploi</h2>
+                <p>
+                    Explorez les opportunités d’emploi adaptées aux anciens étudiants en génie de la santé, mises à jour régulièrement par notre réseau.
+                </p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher une offre d’emploi...">
+                    <button>Rechercher</button>
+                </div>
+                <ul class="service-list">
+                    <li><a href="#">Emplois en France</a></li>
+                    <li><a href="#">Emplois à l’international</a></li>
+                    <li><a href="#">Emplois récents</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section has-background">
+            <div class="group has-text-align-center">
+                <h2 class="subheading">Besoin d’aide ou d’informations supplémentaires ?</h2>
+                <p class="paragraph">
+                    Contactez-nous pour toute question ou pour accéder à des services personnalisés.
+                </p>
+                <a href="#contact" class="button">Nous contacter</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <a href="mailto:contact@isma-alumni.fr">Nous contacter par email</a> <br>
+        <a href="./notice.txt">Télécharger la notice</a>
+    </footer>
+</body>
+</html>
