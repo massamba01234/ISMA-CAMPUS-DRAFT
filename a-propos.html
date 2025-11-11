@@ -2,92 +2,37 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Association des Anciens Étudiants</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #3e3e3e;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-        }
-        .hero {
-            background-color: #f9f9f9;
-            padding: 10rem 1rem 3rem;
-            text-align: center;
-            color: #1f1f1f;
-        }
-        .hero h1 {
-            font-size: 2.9rem;
-            font-weight: 600;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-        .content-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 1rem;
-        }
-        .two-columns {
-            display: flex;
-            gap: 3.5rem;
-            align-items: flex-start;
-            margin-bottom: 4rem;
-        }
-        .column {
-            flex: 1;
-        }
-        .column h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #1f1f1f;
-            margin-bottom: 1.2rem;
-            line-height: 1.3;
-        }
-        .column p {
-            font-size: 1.13rem;
-            line-height: 1.5;
-            margin-top: 0;
-        }
-        .cta-section {
-            background-color: #ece4dd;
-            padding: 4.5rem 1rem;
-            text-align: left;
-        }
-        .cta-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .cta-text h2 {
-            font-size: 1.77rem;
-            font-weight: 600;
-            color: #1f1f1f;
-            margin: 0;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 0.8rem 2.2rem;
-            border: 1px solid #1f1f1f;
-            background-color: #ece4dd;
-            color: #1f1f1f;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            border-radius: 0;
-        }
-        .cta-button:hover {
-            background-color: #d4cbc1;
-        }
-    </style>
+    <link rel="shortcut icon" href="./ISMA_1.jpg">
 </head>
 <body>
-    <section class="hero">
-        <h1>Association des Anciens Étudiants</h1>
+    <nav>
+    <!-- unordered list -->
+    <ul>
+        <li> 
+            <a href="./index.html">Accueil</a>  
+        </li>
+        <li>
+            <a href="./service.html">Service</a>  
+        </li>
+        <li>
+            <a href="./a-propos.html">à propos</a>  
+        </li>
+        <li>
+            <a href="#form">Contact</a>
+         </li>
+    </ul>
+    </nav>
+    <div class="cover has-background">
+        <div class="cover-inner">
+            <h1 class="heading has-text-align-center">Association des Anciens Étudiants</h1>
+            <p class="paragraph has-text-align-center">
+                Bienvenue sur la page À propos de notre association dédiée aux anciens étudiants du Master en Ingénierie de la Santé de Montpellier. Notre mission est de créer une communauté dynamique qui soutient et connecte les diplômés dans leur parcours professionnel.
+            </p>
+        </div>
+    </div>
     </section>
 
     <div class="content-section">
@@ -131,16 +76,21 @@
             </div>
         </div>
     </div>
-
-    <section class="cta-section">
-        <div class="cta-content">
-            <div class="cta-text">
-                <h2>Contactez-nous dès aujourd’hui !</h2>
+     <!-- mail de contact -->
+    <section class="section has-background">
+        <div class="columns">
+            <div class="column">
+                <h3 class="subheading">Contactez ISMA dès Aujourd'hui !</h3>
             </div>
             <div class="cta-button-container">
                 <a href="#contact" class="cta-button">Nous contacter</a>
             </div>
         </div>
     </section>
+    <footer>
+        <a href="mailto:fsfds@gmail.com">Nous contacter</a> <br>
+        <a href="./notice.txt">Téléchager la notice</a>
+    </footer>
+    
 </body>
 </html>
