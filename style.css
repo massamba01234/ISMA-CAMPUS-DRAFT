@@ -214,3 +214,22 @@ footer a {
     gap: 20px;
     justify-content: center;
 }
+/* Styles spécifiques pour la page à propos */
+.poles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.pole {
+    background: #f0f4ff;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+.pole span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+          
