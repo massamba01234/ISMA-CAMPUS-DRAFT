@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- le logo -->
+     <link rel="shortcut icon" href="./ISMA_1.jpg">
+    <!-- les logos de contact -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Contact — ISMA Alumni</title>
+    <style>
+        :root{
+            --bg:#f7f9fb; --card:#fff; --accent:#2b6cb0; --muted:#6b7280; --radius:10px;
+            --max-width:900px;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+            background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased;
+            line-height:1.5;
+        }
+        .wrap{max-width:var(--max-width); margin:32px auto; padding:20px;}
+        
+        .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;}
+        .logo{
+            width:48px; height:48px; background:linear-gradient(135deg,#2563eb,#60a5fa);
+            border-radius:8px; display:flex; align-items:center; justify-content:center; color:white;
+            font-weight:700; font-size:18px;
+        }
+        nav a{margin-left:14px; text-decoration:none; color:var(--muted); font-weight:600}
+        nav a.active, nav a:hover{color:var(--accent)}
+        main{display:grid; gap:24px; grid-template-columns:1fr 360px}
+        @media (max-width:880px){ main{grid-template-columns:1fr;}}
+        .card{background:var(--card); padding:20px; border-radius:var(--radius); box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+        h1{margin:0 0 6px; font-size:20px}
+        p.lead{margin:0 0 18px; color:var(--muted)}
+        form{display:flex; flex-direction:column; gap:12px}
+        label{font-size:13px; color:var(--muted)}
+        input[type="text"], input[type="email"], textarea{
+            width:100%; padding:10px 12px; border:1px solid #e6eef8; border-radius:8px;
+            background:#fbfdff; font-size:15px; color:inherit;
+        }
+        textarea{min-height:140px; resize:vertical}
+        .row{display:flex; gap:12px}
+        .row .col{flex:1}
+        .actions{display:flex; gap:10px; align-items:center; margin-top:6px}
+        
+        
+        .contact-info{font-size:15px; color:var(--muted)}
+        .contact-info a{color:var(--accent); text-decoration:none}
+        footer{margin-top:20px; display:flex; justify-content:space-between; gap:12px; font-size:14px; color:var(--muted)}
+        footer a{color:var(--muted); text-decoration:none}
+        .muted-small{font-size:13px; color:var(--muted)}
+        .note{padding:10px;border-radius:8px;background:#f1f5f9;color:var(--muted);font-size:13px}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+        <nav>
+        <!-- unordered list -->
+        <ul>
+            <li> 
+                <a href="./index.html">Accueil</a>  
+            </li>
+            <li>
+                <a href="./service.html">Services</a>
+            
+            </li>
+            <li>
+                <a href="./a-propos.html">À propos</a>  
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+        <a class="login_btn" href="./connection.html">Se connecter</a>
+        </nav>
+    </header>
+
+        <main>
+            <section class="card" aria-labelledby="contact-heading">
+                <h1 id="contact-heading">Contactez-nous</h1>
+                <p class="lead">Vous avez des questions concernant l'adhésion, les événements ou la collaboration ? Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.</p>
+
+                <form id="contactForm" action="#" method="post" novalidate>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Nom complet</label>
+                            <input id="name" name="name" type="text" placeholder="Votre nom complet" required />
+                        </div>
+                        <div class="col">
+                            <label for="email">Adresse email</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.org" required />
+                        </div>
+                    </div>
+
+                    <label for="subject">Objet</label>
+                    <input id="subject" name="subject" type="text" placeholder="L'objet de votre demande" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Écrivez votre message..." required></textarea>
+
+                    <div class="actions">
+                        <button type="submit" class="envoyer">Envoyer</button>
+                        <div class="muted-small" id="formStatus" aria-live="polite"></div>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="card" aria-labelledby="info-heading">
+                <h2 id="info-heading" style="margin-top:0">Coordonnées</h2>
+                <p class="contact-info">
+                    Email: <a href="mailto:contact@isma-alumni.org">contact@isma-alumni.org</a><br />
+                </p>
+
+                <div style="height:12px"></div>
+
+                <div class="note">
+                    Office hours: Mon–Fri, 9:00–17:00<br />
+                    Please allow 1–3 business days for a response.
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <div class="socials">
+            <a href="https://www.instagram.com/isma_alumni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <i class="fa-brands fa-instagram"></i>
+                <span>My instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/in/isma-ingénierie-de-la-santé-de-montpellier-alumni-8940a82a">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>My linkedin</span>
+            </a>
+        </div>
+        </footer>
+    </div>
+
+    <script>
+        // Small client-side behavior: update year and show a friendly local confirmation.
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Basic validation feedback
+            if (!form.checkValidity()) {
+                status.textContent = 'Please complete all required fields.';
+                return;
+            }
+            // Show a simple confirmation; hookup to back-end or email service as needed.
+            status.textContent = 'Sending…';
+            setTimeout(() => {
+                status.textContent = 'Thank you — your message has been received.';
+                form.reset();
+            }, 700);
+        });
+    </script>
+</body>
+</html>
