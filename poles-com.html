@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Organigramme - ISMA Campus</title>
+    <style>
+        :root{
+            --box-bg:#fff;
+            --box-border:#2c3e50;
+            --accent:#2c3e50;
+            --muted:#666;
+            --shadow: 0 4px 8px rgba(0,0,0,0.08);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        body{
+            margin:0;
+            padding:24px;
+            background:#f4f6f8;
+            color:var(--accent);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:18px;
+            font-size:20px;
+        }
+
+        /* Tree basic layout */
+        .org-chart{
+            display:flex;
+            justify-content:center;
+            width:100%;
+            overflow:auto;
+            padding:20px 0;
+        }
+
+        .org-chart ul{
+            padding-top:20px;
+            position:relative;
+            transition:all .3s ease;
+            display:flex;
+            gap:20px;
+            list-style:none;
+            margin:0;
+            align-items:flex-start;
+        }
+
+        .org-chart li{
+            text-align:center;
+            list-style:none;
+            position:relative;
+            padding:12px 6px 0 6px;
+            transition:all .3s ease;
+            min-width:180px;
+        }
+
+        /* connectors: vertical line above children */
+        .org-chart li::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:50%;
+            border-left:2px solid #c8d0d6;
+            height:20px;
+            transform:translateX(-50%);
+        }
+
+        /* connectors: horizontal line between siblings - applied on parent ul */
+        .org-chart ul::before{
+            content:"";
+            position:absolute;
+            top:10px;
+            left:0;
+            right:0;
+            height:2px;
+            border-top:2px solid #c8d0d6;
+            z-index:0;
+        }
+
+        /* Root has no top connector */
+        .org-chart > ul > li::before{
+            display:none;
+        }
+
+        .node{
+            display:inline-block;
+            background:var(--box-bg);
+            border:2px solid var(--box-border);
+            padding:10px 12px;
+            border-radius:8px;
+            min-width:160px;
+            box-shadow:var(--shadow);
+            position:relative;
+            z-index:2;
+            cursor:pointer;
+            transition:transform .12s ease;
+            user-select:none;
+        }
+
+        .node:hover{ transform:translateY(-3px); }
+
+        .node .title{
+            font-weight:700;
+            font-size:14px;
+            margin-bottom:4px;
+        }
+
+        .node .meta{
+            font-size:12px;
+            color:var(--muted);
+        }
+
+        /* toggle indicator */
+        .node::after{
+            content:"▼";
+            display:inline-block;
+            font-size:10px;
+            margin-left:8px;
+            color:var(--muted);
+            vertical-align:middle;
+            opacity:0.9;
+        }
+
+        /* collapsed state hides children and flips arrow */
+        li.collapsed > ul{
+            display:none;
+        }
+        li.collapsed > .node::after{
+            transform:rotate(-90deg);
+            content:"▶";
+        }
+
+        /* responsive: stack vertically on narrow screens */
+        @media (max-width:720px){
+            .org-chart ul{
+                flex-direction:column;
+                gap:8px;
+                align-items:center;
+            }
+            .org-chart ul::before{ display:none; }
+            .org-chart li::before{ display:none; }
+        }
+
+        /* small helper for editing */
+        .hint{
+            font-size:13px;
+            color:var(--muted);
+            text-align:center;
+            margin-top:12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Organigramme de l'organisation</h1>
+
+    <div class="org-chart" id="chart">
+        <ul>
+            <li>
+                <div class="node" data-role="Directeur">Directeur<br><span class="meta">Nom Prénom</span></div>
+                <ul>
+                    <li>
+                        <div class="node" data-role="Adjoint">Directeur Adjoint<br><span class="meta">Nom Prénom</span></div>
+                        <ul>
+                            <li>
+                                <div class="node" data-role="PoleCom">Pôle Communication<br><span class="meta">Responsable: Nom</span></div>
+                                <ul>
+                                    <li><div class="node" data-role="EquipeMedia">Média & Web<br><span class="meta">Chef: Nom</span></div></li>
+                                    <li><div class="node" data-role="EquipeEvents">Événements<br><span class="meta">Chef: Nom</span></div></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <div class="node" data-role="PoleTech">Pôle Technique<br><span class="meta">Responsable: Nom</span></div>
+                                <ul>
+                                    <li><div class="node" data-role="Dev">Développement<br><span class="meta">Chef: Nom</span></div></li>
+                                    <li><div class="node" data-role="Infra">Infrastructure<br><span class="meta">Chef: Nom</span></div></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <div class="node" data-role="PoleAdmin">Pôle Administratif<br><span class="meta">Responsable: Nom</span></div>
+                                <ul>
+                                    <li><div class="node" data-role="RH">Ressources Humaines<br><span class="meta">Chef: Nom</span></div></li>
+                                    <li><div class="node" data-role="Finance">Finance & Comptabilité<br><span class="meta">Chef: Nom</span></div></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="node" data-role="Conseil">Conseil & Gouvernance<br><span class="meta">Membres: ...</span></div>
+                    </li>
+
+                    <li>
+                        <div class="node" data-role="Partenariats">Partenariats & Relations<br><span class="meta">Responsable: Nom</span></div>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <p class="hint">Cliquez sur un bloc pour réduire/ouvrir ses sous-éléments. Modifiez le HTML pour adapter les titres et les noms.</p>
+
+    <script>
+        // Simple interactivity: click a node to collapse/expand its children
+        (function(){
+            const chart = document.getElementById('chart');
+
+            chart.addEventListener('click', function(e){
+                const node = e.target.closest('.node');
+                if(!node) return;
+                const li = node.parentElement;
+                // Only toggle if there are children
+                if(li && li.querySelector(':scope > ul')){
+                    li.classList.toggle('collapsed');
+                }
+            });
+
+            // Optional: expand/collapse all with keyboard shortcuts
+            document.addEventListener('keydown', function(e){
+                if(e.key === 'Escape'){ // collapse all
+                    document.querySelectorAll('#chart li').forEach(li => li.classList.add('collapsed'));
+                } else if(e.key === 'Enter'){ // expand all
+                    document.querySelectorAll('#chart li').forEach(li => li.classList.remove('collapsed'));
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
