@@ -12,12 +12,16 @@
 <body>
     <nav>
     <!-- unordered list -->
-    <ul>
+    <ul class="menu">
         <li> 
             <a href="./index.html">Accueil</a>  
         </li>
-        <li>
-            <a href="./service.html">Services</a>  
+        <li class="has-submenu">
+            <a href="./service.html">Services</a>
+            <ul class="submenu">
+                <li><a href="…">Webinar</a></li>
+                <li><a href="…">Afterwork</a></li>
+            </ul>  
         </li>
         <li>
             <a href="./a-propos.html">À propos</a>  
@@ -143,13 +147,15 @@
     </section>
 
      <!-- mail de contact -->
-    <section class="section has-background">
+    <section class="has-background">
+        <div class="section">
         <div class="columns">
             <div class="column">
                 <h3 class="subheading">Contactez ISMA dès Aujourd'hui !</h3>
             </div>
             <div class="cta-button-container">
                 <a href="#contact" class="cta-button">Nous contacter</a>
+            </div>
             </div>
         </div>
     </section>
@@ -165,8 +171,10 @@
                 <span>My linkedin</span>
             </a>
         </div>
-        <a href="mailto:fsfds@gmail.com">Nous contacter</a>
-        <a href="./mention-legal.html">Mentions légales</a>
+        <div class="mention">
+            <a href="mailto:fsfds@gmail.com">Nous contacter</a>
+            <a href="./mention-legal.html">Mentions légales</a>
+        </div>
     </footer>
     
 </body>
