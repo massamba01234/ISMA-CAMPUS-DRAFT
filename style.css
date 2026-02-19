@@ -354,7 +354,7 @@ footer a{
     color: #555;
     margin-bottom: 10px;
 }
-
+/* styles pour l'accès au réseaux sociaux */
 @media (max-width: 768px){
     .menu a{
         font-size: 13px;
